@@ -1,0 +1,19 @@
+body {
+  background-color: #0099ff;
+}
+.logincontainer {
+  background-color: white;
+  padding: 24px;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  background-color: #f2f2f2;
+  border: 1px solid #dedede;
+}
+
+.logincontainer button {
+  background-color: #0099ff;
+}
