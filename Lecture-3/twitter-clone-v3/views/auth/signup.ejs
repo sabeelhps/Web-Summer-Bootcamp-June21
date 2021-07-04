@@ -1,0 +1,47 @@
+<%- include("../partials/header") %>
+<link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+
+
+<!-- Layout end -->
+
+<div class="container ">
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6 logincontainer">
+            <h6 class="display-6 text-center">Register</h6>
+            <%- include("../partials/flash") %>
+            <form class="mt-5" action="/register" method="POST">
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="First Name" name="firstname">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Last Name" name="lastname">
+                </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="Email" name="email">
+                </div>
+                <div class="mb-3">
+                  <input type="text" class="form-control" id="username" placeholder="username" name="username">
+                </div>
+                <div class="mb-3">
+                  <input type="password" class="form-control" id="password"placeholder="password" name="password">
+                </div>
+            
+                <div class="d-grid gap-2">
+                    <button type="submit"  class="btn btn-primary">Login</button>
+                </div>
+                <div class="mb-3 mt-3">
+                    <p><a href="/login">Already have an account ? Login here</a></p>
+                </div>
+                
+              </form>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+   
+
+</div>
+
+<%- include("../partials/footer") %>
