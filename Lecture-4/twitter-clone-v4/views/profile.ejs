@@ -1,0 +1,22 @@
+<%- include("partials/header") %>
+<link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            
+            <%- include("./partials/navbar") %>
+            
+            <div class="main-content-container col-10 col-md-8 col-lg-6">
+                <h1 class="fw-bold titleContainer"><%=payload.displayName%></h1>
+               
+            </div>
+            <div class="d-none d-md-block col-md-2 col-lg-4">Third Column</div>
+        </div>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/js/jQuery.js"></script>
+<script src="/js/common.js"></script>
+<%- include("partials/footer") %>
