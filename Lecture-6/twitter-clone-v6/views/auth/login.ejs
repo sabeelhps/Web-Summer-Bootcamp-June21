@@ -1,0 +1,41 @@
+<%- include("../partials/header") %>
+<link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+
+
+<div class="container ">
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6 logincontainer">
+            <h6 class="display-6 text-center">Login</h6>
+            
+            <%- include("../partials/flash") %>
+            
+            <form class="mt-5" action="/login" method="POST">
+                <div class="mb-3">
+                  <input type="text" class="form-control" id="username" placeholder="username" name="username" value="sabeel">
+                </div>
+                <div class="mb-3">
+                
+                  <input type="password" class="form-control" id="password"placeholder="password" name="password" value="1234">
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary" type="submit">Login</button>
+                </div>
+                <div class="mb-3 mt-3">
+                    <p><a href="/register">Need an account ? Register here</a></p>
+                </div>
+                
+              </form>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+   
+
+</div>
+
+
+
+<%- include("../partials/footer") %>
+    

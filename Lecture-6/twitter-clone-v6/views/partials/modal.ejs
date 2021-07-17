@@ -1,0 +1,40 @@
+<div class="modal fade" id="replyModal" tabindex="-1" aria-labelledby="replyModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="replyModalLabel">Reply</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <div id="originalPostContainer"></div>
+          <div class="mb-3 postContainer">
+            <div class="userImageContainer">
+              <img src="/images/profilePic.jpeg" alt="User Profile" />
+            </div>
+  
+            <div class="textareaContainer">
+              <textarea
+                id="reply-text-container"
+                name=""
+                id=""
+                cols="30"
+                rows="3"
+                placeholder="What's happening?"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button  class="btn btn-secondary" data-bs-dismiss="modal">
+            Close
+          </button>
+          <button id="submitReplyButton" class="btn btn-primary">Reply</button>
+        </div>
+      </div>
+    </div>
+  </div>

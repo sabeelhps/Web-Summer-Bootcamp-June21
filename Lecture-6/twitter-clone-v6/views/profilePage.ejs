@@ -1,0 +1,76 @@
+<%- include("partials/header") %>
+<link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            
+            <%- include("./partials/navbar") %>
+
+            <div class="mainSectionContainer col-10 col-md-8 col-lg-6">
+                <div class="titleContainer">
+                    <h1><%=payload.user.firstName%></h1>
+                    </div>
+                <script>
+                    var profileUserId = '<%=payload.user._id%>'
+                </script>    
+               
+                <div class="profileHeaderContainer">
+                    <div class="coverPhotoSection">
+                        <div class="coverPhotoContainer"> 
+                        </div>
+                        <div class="userImageContainer">
+                            <img src="/images/profilePic.jpeg" alt="User profile image">
+                           
+                        </div>
+                    </div>
+                    <div class="profileButtonsContainer"></div>
+                    <div class="userDetailsContainer">
+                        <span class="displayName"><%=payload.user.firstName%> <%=payload.user.lastName%></span>
+                        <span class="username">@<%=payload.user.username%></span>
+                        <span class="description"></span>
+                        
+                        <%if(currentUser._id !== payload.user._id){%>
+                            <a href="/follow/<%=currentUser._id%>/<%=payload.user._id%>">follow</a>
+                        <%}%>
+                        
+                        <div class="followersContainer">
+                            <a href="/profile/<%=payload.user.username%>/following">
+                                <span class="value"><%=payload.user.following.length%></span>
+                                <span>Following</span>
+                            </a>
+                            <a href="/profile/<%=payload.user.username%>/followers">
+                                <span class="value" id="followersValue"><%=payload.user.followers.length%></span>
+                                <span>Followers</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabsContainer">
+                    <a class="tab active" href="/profile/<%=payload.user.username%>">
+                        <span>Posts</span>
+                    </a>
+                    <a class="tab" href="/profile/<%=payload.user.username%>/replies">
+                        <span>Replies</span>
+                    </a>
+                </div>
+                <div class="pinnedPostContainer" style="display: none;"></div>
+                <div class="userPostsContainer">
+                    <!-- <span class="noResults">Nothing to show.</span> -->
+                </div>
+                   
+            </div>
+        </div>
+
+
+
+            <!-- <div class="d-none d-md-block col-md-2 col-lg-4">Third Column</div> -->
+        </div>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/js/jQuery.js"></script>
+<script src="/js/profile.js"></script>
+<script src="/js/common.js"></script>
+<%- include("partials/footer") %>
