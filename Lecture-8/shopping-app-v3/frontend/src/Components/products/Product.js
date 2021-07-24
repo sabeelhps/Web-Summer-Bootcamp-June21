@@ -1,12 +1,12 @@
 import React from 'react'
 import {Card,Button} from 'react-bootstrap';
-import {Link} from 'react-router-dom';
 import './Product.css';
+import { LinkContainer } from 'react-router-bootstrap';
 
 
 function Product(props) {
     return (
-        <Card style={{ width: '18rem' }}>
+        <Card className="mb-3 text-center" style={{ width: '21rem',margin:'10px auto' }}>
             <Card.Img variant="top" src={props.img} />
             <Card.Body>
                 <Card.Title>{props.name}</Card.Title>
@@ -14,9 +14,12 @@ function Product(props) {
                     {props.desc}
                 </Card.Text>
                 <Card.Title>&#8377;{props.price}</Card.Title>
-                <Button variant="primary">
-                    <Link to={`/products/${props.id}`}>Buy Now</Link>
-                </Button>
+
+                <LinkContainer to={`/products/${props.id}`}>
+                    <Button variant="outline-primary">
+                        Buy Now
+                    </Button>
+                </LinkContainer>   
             </Card.Body>
         </Card>
     )

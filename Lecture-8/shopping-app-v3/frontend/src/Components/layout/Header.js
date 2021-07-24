@@ -1,46 +1,46 @@
 import React from 'react'
 import {Navbar,Container,Nav} from 'react-bootstrap';
 import './Header.css';
-import { Link } from 'react-router-dom';
+import { LinkContainer } from 'react-router-bootstrap';
 
 function Header() {
     return (
         <Navbar fixed="top" className="navbar" collapseOnSelect expand="lg" variant="dark">
             <Container>
-                {/* <LinkContainer> */}
-                    <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-                {/* </LinkContainer> */}
+                <LinkContainer to="/">
+                    <Navbar.Brand>React-Bootstrap</Navbar.Brand>
+                </LinkContainer>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        {/* <LinkContainer> */}
-                            <Nav.Link >
-                                <Link className="nav-link" to="/">Home</Link>
+                        <LinkContainer to="/">
+                            <Nav.Link className="nav-link">
+                               Home
                             </Nav.Link>
-                        {/* </LinkContainer> */}
+                        </LinkContainer>
 
-                        {/* <LinkContainer> */}
-                            <Nav.Link >
-                                <Link  className="nav-link" to="/products">Products</Link>
+                        <LinkContainer to="/products">
+                            <Nav.Link className="nav-link">
+                               Products
                             </Nav.Link>
-                        {/* </LinkContainer> */}
-                        {/* <LinkContainer> */}
-                            <Nav.Link >
-                                <Link  className="nav-link" to="/products/new">New</Link>
+                        </LinkContainer>
+                        <LinkContainer to="/products/new">
+                            <Nav.Link className="nav-link">
+                                New
                             </Nav.Link>
-                        {/* </LinkContainer> */}
+                        </LinkContainer>
                     </Nav>
                     <Nav>
-                        {/* <LinkContainer> */}
-                            <Nav.Link  >
-                                <Link  className="nav-link" to="/login">Login</Link>
+                        <LinkContainer to="/login">
+                            <Nav.Link  className="nav-link">
+                                Login
                             </Nav.Link>
-                        {/* </LinkContainer> */}
-                        {/* <LinkContainer> */}
-                            <Nav.Link  >
-                            <Link  className="nav-link" to="/register">Sign Up</Link>
+                        </LinkContainer>
+                        <LinkContainer  to="/register">
+                            <Nav.Link className="nav-link" >
+                                SignUp
                             </Nav.Link>
-                        {/* </LinkContainer> */}
+                        </LinkContainer>
                     </Nav>
             </Navbar.Collapse>
             </Container>

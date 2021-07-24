@@ -3,6 +3,7 @@ import {Row,Col,Card,Button,Form} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 import './Show.css';
+import ProductReviews from '../products/ProductReviews';
 
 
 class Show extends Component {
@@ -49,10 +50,23 @@ class Show extends Component {
 
 
     render() {
+
+        let reviews = <p>This product has no reviews yet</p>;
+
+        if (this.state.reviews.length) {
+            reviews = this.state.reviews.map((review) => {
+                return <ProductReviews
+                    rating={review.rating}
+                    comment={review.comment}
+                    key={review._id}
+                />
+            })
+        }
+
         return (
             <Row>
-                <Col lg={6} md={12}>
-                    <Card style={{ width: '21rem'}}>
+                <Col className="show-card" lg={6} md={12}>
+                    <Card style={{ width: '23rem',margin:'5px auto'}}>
                         <Card.Img variant="top" src={this.state.img} />
                         <Card.Body>
                             <Card.Title>{this.state.name}</Card.Title>
@@ -75,7 +89,7 @@ class Show extends Component {
                         </Card.Body>
                     </Card>
                 </Col>
-                <Col lg={6} md={12}>
+                <Col className="mt-3" lg={4} md={12}>
                     <h1>Leave a Review</h1>
                     <Form onSubmit={this.formSubmitHandler}>
                         <Form.Group className="mb-3">
@@ -93,12 +107,8 @@ class Show extends Component {
                         </Button>
                         </Form>
                         
-                    <div className="mb-3">
-                        <ul>
-                            {this.state.reviews.map((review) => {
-                                return <li>Rating : {review.rating} <p> {review.comment }</p></li>
-                            })}
-                        </ul>
+                    <div className="m-3 mt-3 mb-3">
+                        {reviews}
                     </div>
                     
                 </Col>
