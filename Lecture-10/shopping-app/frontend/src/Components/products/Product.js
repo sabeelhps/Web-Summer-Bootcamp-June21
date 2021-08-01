@@ -6,7 +6,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 
 function Product(props) {
     return (
-        <Card className="mb-3 text-center" style={{ width: '21rem',margin:'10px auto' }}>
+        <Card className="mb-3 text-center" style={{ maxWidth: '21rem',margin:'10px auto' }}>
             <Card.Img variant="top" src={props.img} />
             <Card.Body>
                 <Card.Title>{props.name}</Card.Title>

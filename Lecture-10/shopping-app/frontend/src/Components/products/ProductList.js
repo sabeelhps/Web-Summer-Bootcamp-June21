@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import {Col,Row} from 'react-bootstrap';
 import Product from './Product';
 import axios from 'axios';
-import './ProductList.css'
+import './ProductList.css';
+import {RiShoppingBasketFill} from 'react-icons/ri'
 
 class ProductList extends Component {
     
@@ -39,7 +40,7 @@ class ProductList extends Component {
 
         return (
             <div>
-            <h1 className="heading">Shopping-Cart</h1>  
+            <h1 className="heading"><RiShoppingBasketFill/>Shopping-Cart</h1>  
             <Row>
                 {products}
             </Row>

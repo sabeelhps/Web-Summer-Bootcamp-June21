@@ -6,7 +6,7 @@ import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 import UserContext from '../../store/user-context';
 
-import { FaShoppingCart } from 'react-icons/fa';
+import { FaShoppingCart,FaShoppingBasket } from 'react-icons/fa';
 
 function Header(){
 
@@ -28,7 +28,7 @@ function Header(){
         <Navbar fixed="top" className="navbar" collapseOnSelect expand="lg" variant="dark">
             <Container>
                 <LinkContainer to="/home" style={{fontSize:'1.5rem'}}>
-                    <Navbar.Brand>React-Bootstrap</Navbar.Brand>
+                    <Navbar.Brand><FaShoppingBasket style={{margin:'5px',marginTop:'-5px',fontSize:'1.9rem'}}/>Shopping Cart</Navbar.Brand>
                 </LinkContainer>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">

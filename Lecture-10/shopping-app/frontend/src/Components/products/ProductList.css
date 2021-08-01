@@ -9,3 +9,10 @@
     color:#355070;
     border: 1px solid #eee;  
 }
+
+@media screen and (max-width:500px){
+    
+   .card{
+       width: 85vw;
+   }
+}

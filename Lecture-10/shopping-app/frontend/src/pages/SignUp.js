@@ -36,7 +36,7 @@ function SignUp() {
 
 
     return (
-        <Row>
+        <Row style={{marginBottom:'9.7rem',marginTop:'9rem'}}>
             <Col lg={3}></Col>
             <Col lg={6}>
                     <Form onSubmit={signUpFormHandler}>

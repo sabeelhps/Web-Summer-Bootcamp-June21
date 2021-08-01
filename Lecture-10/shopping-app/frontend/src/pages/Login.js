@@ -36,7 +36,7 @@ function Login() {
 
     
     return (
-        <Row>
+        <Row style={{marginBottom:'16rem',marginTop:'8rem'}}>
             <Col lg={3}></Col>
             <Col lg={6}>
                     <Form onSubmit={loginFormHandler}>

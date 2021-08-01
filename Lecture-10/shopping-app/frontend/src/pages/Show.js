@@ -97,7 +97,7 @@ function Show() {
         
 
         return (
-            <Row>
+            <Row style={{marginBottom:'5rem'}}>
                 <Col className="show-card" lg={6} md={12}>
                     <Card style={{ width: '23rem',margin:'5px auto'}}>
                         <Card.Img variant="top" src={img} />
