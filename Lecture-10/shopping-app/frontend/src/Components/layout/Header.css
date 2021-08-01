@@ -1,0 +1,12 @@
+.navbar{
+    background-color: #0077b6;
+}
+.nav-link{
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+.nav-link a{
+    color: white;
+}
+
