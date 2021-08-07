@@ -1,0 +1,18 @@
+.heading{   
+    width: 98%;
+    background-color: #e9ecef;
+    padding: 20px;
+    margin: 10px auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    color:#355070;
+    border: 1px solid #eee;  
+}
+
+@media screen and (max-width:500px){
+    
+   .card{
+       width: 85vw;
+   }
+}

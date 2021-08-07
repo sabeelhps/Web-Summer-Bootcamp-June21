@@ -1,0 +1,13 @@
+<%- include("./partials/header")%>
+
+    <h1>Index Page</h1>
+
+    <%for(let blog of blogs){%>
+        <article>
+            <h2><%=blog.title%></h2>
+            <p><%=blog.body%></p>
+        </article>
+    <%}%>
+
+<%- include("./partials/header")%>
+
