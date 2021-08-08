@@ -1,0 +1,53 @@
+nav {
+  border-bottom: 1px solid black;
+}
+
+#cover-photo {
+  border-bottom: 1px solid black;
+  height: 43vh;
+}
+
+#cover-photo h1 {
+  width: 400px;
+  font-weight: 700;
+  font-family: serif;
+}
+
+#cover-photo div {
+  margin-left: 100px;
+}
+
+#cover-photo button {
+  background: none;
+  border: none;
+  border: 1px solid black;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.card {
+  margin: 20px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
+}
+
+#show {
+  width: 50vw;
+  margin: 8rem auto;
+}
+
+#show img {
+  width: 100%;
+}
+
+#show h1 {
+  margin-top: 20px;
+  font-family: serif;
+  font-weight: 500;
+}
